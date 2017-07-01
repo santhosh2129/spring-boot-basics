@@ -32,6 +32,7 @@ public class UserSingUpServiceImpl implements UserSingUpService {
         name.setFirstName(signupRequestEntity.getFirstName());
         name.setLastName(signupRequestEntity.getLastName());
         signUpEntity.setName(name);
+        signUpEntity.setUserName(signupRequestEntity.getUserName());
         userSignUpRepository.insert(signUpEntity);
         return signupRequestEntity.getUserName();
     }
