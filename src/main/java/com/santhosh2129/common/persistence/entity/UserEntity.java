@@ -12,7 +12,7 @@ import java.util.Map;
  */
 
 @Document(collection = "users")
-public class SignUpEntity {
+public class UserEntity {
     public static final String NAME = "name";
     public static final String PASSWORD = "password";
     public static final String UPDATE_TS = "update_ts";

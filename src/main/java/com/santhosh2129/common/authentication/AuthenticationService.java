@@ -22,4 +22,14 @@ public class AuthenticationService {
         return null;
     }
 
+    public boolean checkPassword(String password , String hashedPassword) {
+        try {
+            BCryptPasswordEncoder bCryptPasswordEncoder =  new BCryptPasswordEncoder();
+            return  bCryptPasswordEncoder.matches(password,hashedPassword);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

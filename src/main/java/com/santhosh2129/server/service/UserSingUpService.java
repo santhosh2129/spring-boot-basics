@@ -1,5 +1,6 @@
 package com.santhosh2129.server.service;
 
+import com.santhosh2129.server.rest.entity.SigninRequestEntity;
 import com.santhosh2129.server.rest.entity.SignupRequestEntity;
 
 /**
@@ -7,4 +8,7 @@ import com.santhosh2129.server.rest.entity.SignupRequestEntity;
  */
 public interface UserSingUpService {
     public String registerUser(SignupRequestEntity signupRequestEntity);
+
+    public String loginUser(SigninRequestEntity signinRequestEntity);
+
 }

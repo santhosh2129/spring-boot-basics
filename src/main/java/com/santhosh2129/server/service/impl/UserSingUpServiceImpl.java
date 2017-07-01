@@ -1,8 +1,9 @@
 package com.santhosh2129.server.service.impl;
 
 import com.santhosh2129.common.authentication.AuthenticationService;
-import com.santhosh2129.common.persistence.entity.SignUpEntity;
+import com.santhosh2129.common.persistence.entity.UserEntity;
 import com.santhosh2129.common.persistence.repository.UserSignUpRepository;
+import com.santhosh2129.server.rest.entity.SigninRequestEntity;
 import com.santhosh2129.server.rest.entity.SignupRequestEntity;
 import com.santhosh2129.server.service.UserSingUpService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,16 +25,29 @@ public class UserSingUpServiceImpl implements UserSingUpService {
 
     @Override
     public String registerUser(SignupRequestEntity signupRequestEntity) {
-        SignUpEntity signUpEntity = new SignUpEntity();
-        signUpEntity.setPassword(authenticationService.encrypt(signupRequestEntity.getPassword()));
-        signUpEntity.setCreateTimestamp(new Date());
-        signUpEntity.setUpdateTimestamp(new Date());
-        SignUpEntity.Name name = signUpEntity.new Name();
+        UserEntity userEntity = new UserEntity();
+        userEntity.setPassword(authenticationService.encrypt(signupRequestEntity.getPassword()));
+        userEntity.setCreateTimestamp(new Date());
+        userEntity.setUpdateTimestamp(new Date());
+        UserEntity.Name name = userEntity.new Name();
         name.setFirstName(signupRequestEntity.getFirstName());
         name.setLastName(signupRequestEntity.getLastName());
-        signUpEntity.setName(name);
-        signUpEntity.setUserName(signupRequestEntity.getUserName());
-        userSignUpRepository.insert(signUpEntity);
+        userEntity.setName(name);
+        userEntity.setUserName(signupRequestEntity.getUserName());
+        userSignUpRepository.insert(userEntity);
         return signupRequestEntity.getUserName();
+    }
+
+    @Override
+    public String loginUser(SigninRequestEntity signinRequestEntity) {
+        UserEntity userDocument = userSignUpRepository.findOne(signinRequestEntity.getUserName());
+        if (userDocument == null) {
+            return "User Not Registered";
+        }
+        if (authenticationService.checkPassword(signinRequestEntity.getPassword(), userDocument.getPassword())) {
+            return "Sign In Success";
+        } else {
+            return "Wrong password";
+        }
     }
 }

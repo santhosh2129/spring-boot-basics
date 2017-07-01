@@ -1,10 +1,10 @@
 package com.santhosh2129.common.persistence.repository;
 
-import com.santhosh2129.common.persistence.entity.SignUpEntity;
+import com.santhosh2129.common.persistence.entity.UserEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
  * Created by santhosh on 7/1/17.
  */
-public interface UserSignUpRepository extends MongoRepository<SignUpEntity , String>{
+public interface UserSignUpRepository extends MongoRepository<UserEntity, String>{
 }
