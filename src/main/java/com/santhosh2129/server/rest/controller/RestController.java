@@ -1,6 +1,8 @@
-package com.santhosh2129.rest.controller;
+package com.santhosh2129.server.rest.controller;
 
-import com.santhosh2129.rest.entity.SignupRequestEntity;
+import com.santhosh2129.server.rest.entity.SignupRequestEntity;
+import com.santhosh2129.server.service.UserSingUpService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,9 +15,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/santhosh2129")
 public class RestController {
 
+    @Autowired
+    private UserSingUpService userSingUpService;
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public String registerModule(@Validated @RequestBody SignupRequestEntity signupRequestEntity) {
-        return "hello " + signupRequestEntity.getUserName();
+        return userSingUpService.registerUser(signupRequestEntity);
     }
 
 }
