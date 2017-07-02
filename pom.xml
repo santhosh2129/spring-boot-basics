@@ -30,6 +30,11 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>4.7</version>
+        </dependency>
 
     </dependencies>
 
@@ -73,5 +78,5 @@
         </pluginRepository>
     </pluginRepositories>
 
-    
+
 </project>
