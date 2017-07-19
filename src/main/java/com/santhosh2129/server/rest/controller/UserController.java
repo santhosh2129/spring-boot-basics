@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
  * Created by santhosh on 7/1/17.
  */
 
-@org.springframework.web.bind.annotation.RestController
+@RestController
 @CrossOrigin
 @RequestMapping("/santhosh2129")
 public class UserController {
