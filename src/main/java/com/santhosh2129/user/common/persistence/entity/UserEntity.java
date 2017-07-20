@@ -1,11 +1,10 @@
-package com.santhosh2129.common.persistence.entity;
+package com.santhosh2129.user.common.persistence.entity;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.util.Date;
-import java.util.Map;
 
 /**
  * Created by santhosh on 7/1/17.

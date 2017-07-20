@@ -1,8 +1,8 @@
-package com.santhosh2129.server.rest.controller;
+package com.santhosh2129.user.server.rest.controller;
 
-import com.santhosh2129.server.rest.entity.SigninRequestEntity;
-import com.santhosh2129.server.rest.entity.SignupRequestEntity;
-import com.santhosh2129.server.service.UserSingUpService;
+import com.santhosh2129.user.server.rest.entity.SigninRequestEntity;
+import com.santhosh2129.user.server.rest.entity.SignupRequestEntity;
+import com.santhosh2129.user.server.service.UserSingUpService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;

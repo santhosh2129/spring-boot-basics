@@ -1,11 +1,11 @@
-package com.santhosh2129.server.service.impl;
+package com.santhosh2129.user.server.service.impl;
 
-import com.santhosh2129.common.authentication.AuthenticationService;
-import com.santhosh2129.common.persistence.entity.UserEntity;
-import com.santhosh2129.common.persistence.repository.UserSignUpRepository;
-import com.santhosh2129.server.rest.entity.SigninRequestEntity;
-import com.santhosh2129.server.rest.entity.SignupRequestEntity;
-import com.santhosh2129.server.service.UserSingUpService;
+import com.santhosh2129.user.common.authentication.AuthenticationService;
+import com.santhosh2129.user.common.persistence.entity.UserEntity;
+import com.santhosh2129.user.common.persistence.repository.UserSignUpRepository;
+import com.santhosh2129.user.server.rest.entity.SigninRequestEntity;
+import com.santhosh2129.user.server.rest.entity.SignupRequestEntity;
+import com.santhosh2129.user.server.service.UserSingUpService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

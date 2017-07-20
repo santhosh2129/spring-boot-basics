@@ -1,4 +1,4 @@
-package com.santhosh2129.common.authentication;
+package com.santhosh2129.user.common.authentication;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.santhosh2129.server.rest.entity;
+package com.santhosh2129.user.server.rest.entity;
 
 import javax.validation.constraints.NotNull;
 

@@ -1,4 +1,4 @@
-package com.santhosh2129.common.persistence.config;
+package com.santhosh2129.user.common.persistence.config;
 
 import com.mongodb.Mongo;
 import com.mongodb.MongoClient;
@@ -23,7 +23,7 @@ import java.util.List;
  * Created by santhosh on 7/1/17.
  */
 @Configuration
-@EnableMongoRepositories(basePackages = "com.santhosh2129.common.persistence.repository")
+@EnableMongoRepositories(basePackages = "com.santhosh2129.user.common.persistence.repository")
 public class MongoConfig extends AbstractMongoConfiguration {
 
     @Value("${spring.data.mongodb.host}")

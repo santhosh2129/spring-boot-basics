@@ -1,6 +1,6 @@
-package com.santhosh2129.common.persistence.repository;
+package com.santhosh2129.user.common.persistence.repository;
 
-import com.santhosh2129.common.persistence.entity.UserEntity;
+import com.santhosh2129.user.common.persistence.entity.UserEntity;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
