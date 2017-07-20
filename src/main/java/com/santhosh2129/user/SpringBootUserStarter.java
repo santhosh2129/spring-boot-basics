@@ -12,8 +12,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableDiscoveryClient
-public class SpringBootStarter {
+public class SpringBootUserStarter {
     public static void main(String[] arg) {
-        SpringApplication.run(SpringBootStarter.class, arg);
+        SpringApplication.run(SpringBootUserStarter.class, arg);
     }
 }
